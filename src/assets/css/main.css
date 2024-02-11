@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'PL Bold';
+  src: local('Premier League Bold'), local('Premier-League-Bold'),
+    url('../fonts/PremierLeague-Bold.woff2') format('woff2'),
+    url('../fonts/PremierLeague-Bold.woff') format('woff'),
+    url('../fonts/PremierLeague-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PL';
+  src: local('Premier League Regular'), local('Premier-League-Regular'),
+    url('../fonts/PremierLeague-Regular.woff2') format('woff2'),
+    url('../fonts/PremierLeague-Regular.woff') format('woff'),
+    url('../fonts/PremierLeague-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PL Bold', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+p,
+a,
+span,
+li,
+input,
+button,
+hgroup > p,
+hgroup > a {
+  font-family: 'PL', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+hgroup > a:hover,
+hgroup > a:focus {
+  text-decoration: none;
+}
+
+form > button {
+  margin-bottom: 8px;
+}
+
+form > input {
+  height:3em !important;
+  font-size: 16px;
+}
+
+article > h5 {
+  margin-bottom: 0.5em;
+}
+
+button {
+  height: 40px;
+}
+
+.modal {
+  height: fit-content;
+}
+
+/* Pink Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --primary: #37003c;
+  --primary-hover: #45004c;
+  --primary-focus: rgba(55, 0, 60, 0.125);
+  --primary-inverse: #fff;
+}
+
+/* Pink Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #d81b60;
+    --primary-hover: #e91e63;
+    --primary-focus: rgba(216, 27, 96, 0.25);
+    --primary-inverse: #fff;
+  }
+}
+
+/* Pink Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme='dark'] {
+  --primary: #d81b60;
+  --primary-hover: #e91e63;
+  --primary-focus: rgba(216, 27, 96, 0.25);
+  --primary-inverse: #fff;
+}
+
+/* Pink (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
