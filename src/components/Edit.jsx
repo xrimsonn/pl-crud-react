@@ -26,13 +26,12 @@ const Edit = () => {
   const getTeamById = async (id) => {
     const team = await getDoc(doc(db, 'teams', id));
     if (team.exists()) {
-      console.log('Document data:', team.data());
       const data = team.data();
       setName(data.name);
       setCity(data.city);
       setTrophies(data.trophies);
     } else {
-      console.log('No such document');
+      navigate('/');
     }
   };
 
