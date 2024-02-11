@@ -2,8 +2,12 @@ import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
 const firebaseKeys = [
-  "SOME_KEY_IN_YOUR_ENV_FILE",
-  "SOME_OTHER_KEY_IN_YOUR_ENV_FILE",
+  "REACT_APP_FIREBASE_API_KEY",
+  "REACT_APP_FIREBASE_AUTH_DOMAIN",
+  "REACT_APP_FIREBASE_PROJECT_ID",
+  "REACT_APP_FIREBASE_STORAGE_BUCKET",
+  "REACT_APP_FIREBASE_MESSAGING_SENDER_ID",
+  "REACT_APP_FIREBASE_APP_ID",
 ];
 
 export default defineConfig(({ mode }) => {
